@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# Happy Steps
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Happy Steps** is a mobile application designed to help parents encourage and track their children’s daily habits and progress.  
+The app allows parents to create child profiles, assign activities, reward progress, and monitor milestones in a simple and motivating way.
 
-## Get started
+All data is stored locally on the device using a **SQLite database**.  
+No data is uploaded, shared, or transmitted outside the app — ensuring complete privacy and safety for your family’s information.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Overview
 
-2. Start the app
+Happy Steps makes it easier for families to build positive routines together.  
+It uses a points-based reward system that encourages consistency while providing parents with a clear overview of each child’s daily achievements.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Child Profiles** – Create and manage multiple children, each with their own activities and milestones.
+- **Daily Activity Tracking** – Mark off daily habits and automatically record completion.
+- **Reward System** – Assign points for completed activities and track total rewards.
+- **Milestones** – Set goals for children and celebrate when they reach them.
+- **Data Management** – Automatically cleans unused data and supports resetting all app data.
+- **Offline Support** – Works entirely offline using local SQLite storage.
+- **Simple Interface** – Built for clarity and ease of use, even for new users.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Technology Stack
 
-When you're ready, run:
+| Area       | Technology                      |
+| ---------- | ------------------------------- |
+| Framework  | React Native with Expo          |
+| Language   | TypeScript                      |
+| Database   | SQLite                          |
+| Navigation | React Navigation (Native Stack) |
+| Styling    | React Native StyleSheet         |
+| Icons      | Icons taken from Icon8          |
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Database
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Happy Steps uses Expo SQLite for local data storage.
+The database is automatically initialized when the app starts.
+All required tables (children, activities, daily checks, rewards, milestones, and settings) are created on startup by calling initDB().
